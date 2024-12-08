@@ -1,0 +1,325 @@
+ 
+
+ *{
+      margin : 0;
+      padding : 0;
+      box-sizing:border-box;
+ }  
+ 
+ button:hover{
+       opacity : 0.6574;
+ }   
+
+
+ body{
+      background-color:#FEE8D7;
+ }    
+
+ p, i , button{
+     cursor:pointer;
+ }
+
+ .topper {
+    top: 0; 
+    background-color:rgba(233, 218, 14, 0.4);
+    padding-bottom:10px; 
+    display:none;
+}
+
+
+  .header{ 
+    background-color:#FFF5E1; 
+    display:flex;
+    justify-content:space-around;
+    width:100%;
+    padding-left:12px;    
+    border-top: 4px solid;
+    border-image: linear-gradient(to right, #D8C3A5, #8B6F47) 1;
+    z-index:2;
+    position:fixed; 
+    text-align:center;
+    padding-right:12px;   
+    padding-top:14px;
+    padding-bottom:10px;
+  }        
+
+  .enclose{
+     background-color:black;
+     min-width:100px;
+     margin-left:10px; 
+     padding-top:15px;
+     margin-top:20px;
+     border-radius:20px;
+     margin-right:10px;
+  }
+
+  
+
+  .header h1{ 
+      font-size:22px; 
+      text-align:center;
+      font-weight:bold;   
+      text-transform:uppercase;  
+      margin-top:7px;
+      font-family:"Yuji Mai", serif;
+  }
+
+  .header p{     
+    font-family:"Yuji Mai", serif;
+     font-size:17px; 
+     font-weight:bold;   
+     margin-top:10px; 
+  }
+
+
+  .frontview {
+    background:linear-gradient(rgba(0,0,0,0.30), rgba(0,0,0,0.30)), url('/images/buddhabg.jpg');
+    background-position: right;  /* Position the background more towards the top right */
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 25px;
+    padding-top:150px; 
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px; 
+}
+
+
+  .frontview .pure{
+     font-size:33px;
+     color:white; 
+     font-family: "Creepster", system-ui;
+     font-weight:bold; 
+     letter-spacing:3px;
+     text-transform:uppercase;   
+     margin-top:10px;
+  } 
+
+
+  .frontview .colored{
+    margin-top:10px;
+    font-size:26px;
+    color:#FCE2C4;
+    font-weight:bold;
+    font-family: 'Poppins', sans-serif;
+ } 
+
+ .frontview .tiny{
+    font-size:20px; 
+    font-family: 'Poppins', sans-serif;
+    margin-top:10px;
+    color:white;
+ }  
+   
+
+
+ .frontview button{
+    padding:14px;
+    border:none;
+    font-family: "Ga Maamli", sans-serif;
+    border-radius:5px;
+    font-weight:bold;
+ }
+
+ .frontview .explore{ 
+    letter-spacing:1px;
+      color:white; 
+      width:170px;
+      background-color:grey;
+      font-size:20px;
+ }  
+
+ .frontview .sub{ 
+    width:200px;
+    color:white;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    background-color:red;
+     margin-left:10px;
+     font-size:20px;
+}  
+
+.overview{
+     display:grid;
+     grid-template-columns:repeat(auto-fit, minmax(200px, 3fr));
+     grid-row-gap:18px;
+     grid-column-gap:10px;
+     margin-left:5px;
+     margin-right:5px; 
+     padding-left:5px;
+     padding-right:5px;  
+     padding-right:10px;
+     padding-left:10px;
+     padding-bottom:10px;
+     margin-top:10px;  
+} 
+
+.overview div{ 
+    width:100%;  
+    text-align:center;
+    justify-content:center;  
+    transform:scale(1.0);
+}   
+
+.overview div:hover{
+    transform:scale(1.053);
+}
+    
+.overview div button{
+    padding:7px;
+    border:none;
+    font-family:"Yuji Mai", serif;
+    border-radius:15px;
+    font-weight:bold;
+    background-color: #E4B77D;
+    border:none;
+    border-radius:10px;
+    width:140px;
+    color:white;
+    font-size:18px; 
+    margin-top:4px;
+}   
+
+.overview div img{
+      width:100%;
+      height:220px;
+}  
+
+
+
+
+.ovb{
+      min-width:100px;
+      margin-top:40px;
+      margin-left:20px;  
+      margin-right:20px;  
+      border-bottom:3px solid white;
+      text-align:center;
+      justify-content:center;
+}     
+
+
+.ovb h1{
+    color:white;
+     font-family: "Carter One", system-ui;
+     font-weight:bold;
+     text-transform:uppercase; 
+    letter-spacing:2px; 
+     font-size:22px;
+} 
+
+
+.ovb p{
+    color:white;
+    margin-top:10px;
+    font-weight:bold; 
+    letter-spacing:1px; 
+    font-size:20px; 
+    font-family: "Carter One", system-ui;
+} 
+ 
+
+.ovb div { 
+       margin-top:-10px; 
+} 
+
+.ovb div img{
+     width:50%;
+     height:auto;  
+     transform:scale(1.0);
+}    
+ 
+
+.ovb div img:hover{
+    transform:scale(1.0534); 
+}
+
+   
+    
+.ovc{
+    min-width:100px;
+    margin-top:50px;
+    margin-left:10px;
+    margin-right:10px;   
+    text-align:center; 
+    justify-content:center; 
+    margin-bottom:40px;
+}     
+
+
+.ovc h1{
+    color:white;
+    font-family: "Carter One", system-ui;
+   font-weight:bold;
+   text-transform:uppercase; 
+  letter-spacing:2px; 
+   font-size:22px;
+} 
+
+
+.ovc p{
+    color:white;
+  margin-top:10px;
+  font-weight:bold; 
+  letter-spacing:1px; 
+  font-size:20px;
+  font-family: "Carter One", system-ui;
+}   
+
+
+ .ovc div{
+    width:100%; 
+    text-align:center;
+    justify-content:center;
+    background-color:rgba(233, 218, 14, 0.4);
+    margin-top:10px;   
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-right:10px;
+    padding-left:10px;
+}  
+
+ .ovc div button{
+     background-color:red;
+     color:white; 
+     font-family:'Poppins', sans-serif;
+     font-weight:bold;
+     width:80%; 
+     font-size:16px;
+     border:none;
+     padding:10px; 
+ }
+ 
+
+ .footer{
+     min-width:100px;
+    margin-top:60px;     
+    padding-top:10px;
+    padding-bottom:10px; 
+    display:grid;  
+    grid-gap:10px;
+    grid-template-columns:repeat(auto-fit, minmax(100px, 3fr)); 
+    margin-right:20px;
+    margin-left:20px;   
+    text-align:center;
+    justify-content:center;  
+}      
+
+.footer div{
+     width:100%;
+}  
+
+.footer p {
+    color:white;
+     font-weight:bold; 
+     font-family:'Poppins', sans-serif;
+     font-size:16px;
+     text-transform:uppercase;
+} 
+
+@media only screen and (max-width:608px) {
+    .ovb div img{
+          width:100%;
+          height:auto;
+    }
+}

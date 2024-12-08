@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+  <%- include('../partials/head.ejs') %> 
+  <title>Payment Canceled</title> 
+
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-color: black; /* Dark background for the website */
+      color: #f5f5f5; /* Light text color for contrast */
+      margin: 0;
+      padding: 0;
+    } 
+
+    h1, h2, p {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-width: 100px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .content {
+      background-color: #1e1e1e; /* Darker background for content */
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      padding: 30px;
+      width: 100%;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #f5f5f5;
+      font-size: 28px;
+      margin-bottom: 15px;
+      font-family: 'Poppins', serif;
+      font-weight: bold;
+    }
+
+    p {
+      color: #bbb; /* Slightly lighter text for description */
+      font-size: 18px;
+      margin-bottom: 30px;
+      font-family: 'Poppins', serif;
+    }
+
+    .button {
+      background-color: #d32f2f; /* Buddha red color */
+      color: white;
+      padding: 10px 20px;
+      font-family: 'Poppins', serif;
+      font-size: 16px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .button:hover {
+      background-color: #b71c1c; /* Darker red shade for hover effect */
+    }
+
+    .message {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #bbb;
+    }
+
+    /* Responsive Design */
+    @media (min-width: 768px) {
+      .container {
+        padding: 50px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Payment Canceled Section -->
+  <div class="container">
+    <div class="content">
+      <h2>Payment Canceled</h2>
+      <p>Your payment process was canceled. If you didn't initiate this, please check with your payment provider.</p>
+      
+      <p class="message">If you wish to try again, you can return to the subscription page. If you have any issues, feel free to contact our support team.</p>
+
+      <!-- Navigation Buttons -->
+      <a href="/subscribe" class="button">Try Again</a>
+      <a href="/" class="button">Go to Homepage</a>
+      <a href="/contact" class="button">Contact Support</a>
+    </div>
+  </div>
+
+</body>
+</html>
