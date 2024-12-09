@@ -72,7 +72,7 @@ const session = await stripe.checkout.sessions.create({
               product_data: {
                   name: 'Buddha TV', // Provide a description or name for the product
               },
-              unit_amount: Math.round(8.8 * 100), // Convert to pence  
+              unit_amount: Math.round(8.8 * 100).toFixed(2), // Convert to pence  
           }, 
           quantity: 1,
       },
@@ -151,7 +151,7 @@ line_items: [
          product_data: {
              name: 'Buddha TV', // Provide a description or name for the product
          },
-         unit_amount: Math.round(88.8 * 100), // Convert to pence  
+         unit_amount: Math.round(88.8 * 100).toFixed(2), // Convert to pence  
      }, 
      quantity: 1,
  },
