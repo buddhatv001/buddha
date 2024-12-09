@@ -29,7 +29,7 @@ export const postSubscriber = async (req,res)=>{
          const email = subscriber.email;   
          const protocol = req.protocol;
 const host = req.get('host');
-const WEB_DOMAIN = `${protocol}://${host}`; 
+const WEB_DOMAIN = 'https://buddha.tv';
 console.log(WEB_DOMAIN);   
 
   try{ 
