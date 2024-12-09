@@ -85,8 +85,9 @@ success_url: `${WEB_DOMAIN}/success_xbe87c3r2c67v3r2/${trxRef}/${uniqueid}/${use
 cancel_url: `${WEB_DOMAIN}/cancel_ebgrdyuwregi4r3gg6g`, 
   }); 
        
-   console.log(session.url);
-   res.json({paymenturl: session.url});     
+   console.log(session.url); 
+   const theurl = session.url;
+   res.json({paymenturl: theurl});      
 } 
 
    catch(err) {   
