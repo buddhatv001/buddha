@@ -16,5 +16,6 @@
   router.get('/subscribe', basicController.getSub);   
   router.get('/watch', basicController.getWatch);    
   router.post('/postsubscriber', subController.postSubscriber);    
+  router.post('/postsubscriberplus', subController.postSubscriberplus);    
   
   export default router;  
