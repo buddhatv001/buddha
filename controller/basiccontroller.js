@@ -23,12 +23,10 @@ export const getSuccess = async (req,res)=>{
     if(!orderDetails){ 
         console.log('not exist');
           res.render('./pages/error');
-    }    
+    }     
     const itsMatch = await bcrypt.compare(trxref, orderDetails.trxRef); 
      if (itsMatch) { 
-    res.render('./pages/success');  
-    await OrdDb.findByIdAndDelete(orderDetails._id);     
-
+    res.render('./pages/success');   
     // Create a SMTP transporter
 const transporter = nodemailer.createTransport({
     host: 'smtp-relay.sendinblue.com', 
@@ -46,13 +44,25 @@ const transporter = nodemailer.createTransport({
    'monk@buddha.tv',  
    'victoremmy1876@gmail.com',
 ]; 
-
-const mailOptions = {
+  
+  
+if(orderDetails.price === 8.88) {
+  const mailOptions = {
     from: 'victoremmy1876@gmail.com',
     to: emailAddresses.join(', '),
     subject: 'Buddha Order information',
-    html: `A new user has just subscribed to BuddhaTV with an $8 plan. The user's name is <b>${name}</b>, and their email is <b>${email}</b>.`,
+    html: `A new user has just subscribed to BuddhaTV with an $8.88 plan. The user's name is <b>${name}</b>, and their email is <b>${email}</b>.`,
   }; 
+} else {
+  const mailOptions = {
+    from: 'victoremmy1876@gmail.com',
+    to: emailAddresses.join(', '),
+    subject: 'Buddha Order information',
+    html: `A new user has just subscribed to BuddhaTV with an $88.88 plan. The user's name is <b>${name}</b>, and their email is <b>${email}</b>.`,
+  }; 
+} 
+
+
 
 // Send email
 transporter.sendMail(mailOptions, (error, info) => {
@@ -62,7 +72,8 @@ transporter.sendMail(mailOptions, (error, info) => {
         console.log('Email sent:', info.response);
     }
 });
-   
+      
+    await OrdDb.findByIdAndDelete(orderDetails._id);  
 
   } else {
     res.render('./pages/error');

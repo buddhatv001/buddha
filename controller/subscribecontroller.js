@@ -58,7 +58,8 @@ const uniqueid =   Math.floor(10000 + Math.random() * 9873762732);
 const orderInfo = await OrdDb.create({ 
     uniqueId : uniqueid,
     name : subscriber.name,
-    email : subscriber.email,
+    email : subscriber.email,  
+    price : 8.8,
     trxRef : txRef, 
 });
  
@@ -71,7 +72,7 @@ const session = await stripe.checkout.sessions.create({
               product_data: {
                   name: 'Buddha TV', // Provide a description or name for the product
               },
-              unit_amount: Math.round(8 * 100), // Convert to pence  
+              unit_amount: Math.round(8.8 * 100), // Convert to pence  
           }, 
           quantity: 1,
       },
@@ -136,7 +137,8 @@ const uniqueid =   Math.floor(10000 + Math.random() * 9873762732);
 const orderInfo = await OrdDb.create({ 
 uniqueId : uniqueid,
 name : subscriber.name,
-email : subscriber.email,
+email : subscriber.email, 
+price : 88.8,
 trxRef : txRef, 
 });
 
@@ -149,7 +151,7 @@ line_items: [
          product_data: {
              name: 'Buddha TV', // Provide a description or name for the product
          },
-         unit_amount: Math.round(8 * 100), // Convert to pence  
+         unit_amount: Math.round(88.8 * 100), // Convert to pence  
      }, 
      quantity: 1,
  },

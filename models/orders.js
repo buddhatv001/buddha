@@ -16,8 +16,16 @@ const orderRequestSchema = new mongoose.Schema({
   uniqueId : {
     type: String,
     required: true,
+  },  
+
+
+  price : {
+    type: Number,
+    required: true,
   },
- 
+   
+   
+
   trxRef: { 
     type: String,  
     unique: true,

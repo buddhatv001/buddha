@@ -14,7 +14,12 @@
               color: #f5f5f5; /* Light text color for contrast */
               margin: 0;
               padding: 0;
-          } 
+          }  
+          
+          strong{
+             font-family:'Poppins', sans-serif;
+             color:lightgrey;
+          }
 
 
              h1, h2, p{
@@ -32,15 +37,16 @@
               align-items: center;
               justify-content: center;
               min-width:100px; 
-              padding-left:20px;
-              padding-right:20px;
+              padding-left:10px;
+              padding-right:10px;
           }
   
           .contentt {
               background-color: #1e1e1e; /* Darker background for content */
               border-radius: 15px;
               box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-              padding:30px;
+              padding-left:10px; 
+              padding-right:10px;
               width: 100%;
               max-width: 800px; /* Content occupies more width on desktop */
               text-align: center;
@@ -60,7 +66,7 @@
               margin-bottom: 30px;
           }
   
-          .btton {
+          .btton, .bttonn {
               background-color: #d32f2f; /* Elegant Buddha red color */
               color: white;    
               text-align:center; 
@@ -203,20 +209,19 @@
                <p style="text-align:left; color:white; font-family:'Poppins', sans-serif">Buddha.tv stands as a unique streaming platform, offering content curated and delivered by monks, ajarns, and healers. This direct involvement of spiritual leaders ensures that each program is infused with authentic teachings and practices, providing a transformative experience for our members.
 
                 Through partnerships with temples and sanctuaries worldwide, Buddha.tv facilitates the growth of merit across various communities. Your contributions support these initiatives, and in return, members receive blessings from monks globally, fostering a deep spiritual connection.</p> 
-<br><p style="color:coral">We offer two distinct membership programs:</p>
+<br><p style="color:coral; font-weight:bold">We offer two distinct membership programs:</p>
 
 
-<h1 style="text-align:left;">1. The Path of Enlightenment – $8.88 Monthly Contribution
-    Benefits:
-    
-    Access to Curated Teachings: Engage with a diverse library of teachings from esteemed monks, ajarns, and healers, encompassing meditation, mindfulness, and spiritual wisdom.
-    Global Blessings: Be included in prayers and rituals conducted by monks worldwide, inviting peace and harmony into your life.
-    Support Humanitarian Efforts: Your contribution aids in building water wells, funding healthcare, and providing essential supplies to underserved communities in Africa, Asia, and the Caribbean.
-    Marketing Message:
-    
-    Embark on your spiritual journey with the Path of Enlightenment. For just $8.88 a month, access authentic teachings and receive global blessings, all while contributing to meaningful humanitarian efforts.</h1>
-             
-                
+<p style="text-align:left;">
+    1. The Path of Enlightenment – $8.88 Monthly Contribution<br>
+    <strong>Benefits:</strong><br>
+    Access to Curated Teachings: Engage with a diverse library of teachings from esteemed monks, ajarns, and healers, encompassing meditation, mindfulness, and spiritual wisdom.<br>
+    Global Blessings: Be included in prayers and rituals conducted by monks worldwide, inviting peace and harmony into your life.<br>
+    Support Humanitarian Efforts: Your contribution aids in building water wells, funding healthcare, and providing essential supplies to underserved communities in Africa, Asia, and the Caribbean.<br>
+    <strong>Marketing Message:</strong><br>
+    Embark on your spiritual journey with the Path of Enlightenment. For just $8.88 a month, access authentic teachings and receive global blessings, all while contributing to meaningful humanitarian efforts.
+  </p>
+      
 
                   
                 <h2 style="font-family:'Popppins', sans-serif">The Path of Enlightenment Subscription</h2>
@@ -240,21 +245,18 @@
                 <p class="message">Once you've submitted, you'll be contacted to confirm your subscription details.</p>
           
 
-    <h1 style="text-align:left;">  
-        2. The Ascendant Path – $88.88 Monthly Contribution
-        Benefits:
-        
-        Personalized Spiritual Plan: Receive a monthly plan tailored to your spiritual goals, crafted by experienced monks and ajarns.
-        Exclusive Attunements and Empowerments: Benefit from monthly energy alignments performed by spiritual teachers, each valued at a minimum of $250, designed to elevate your spiritual consciousness.
-        Advanced Teachings: Access exclusive content and rituals available only to Ascendant Path members, deepening your spiritual practice.
-        Direct Contribution to Global Merit: Your support extends to temples and sanctuaries, fostering spiritual growth and merit worldwide.
-        Marketing Message:
-        
-        Elevate your spiritual journey with the Ascendant Path. For $88.88 a month, receive personalized guidance, exclusive attunements valued at over $250 each, and contribute directly to global spiritual initiatives.
-        
-        Join Buddha.tv today to connect with authentic teachings, receive global blessings, and make a meaningful impact through your contributions.</h1> 
-
-
+                <p style="text-align:left;">  
+                    2. The Ascendant Path – $88.88 Monthly Contribution<br>
+                    <strong>Benefits:</strong><br>
+                    Personalized Spiritual Plan: Receive a monthly plan tailored to your spiritual goals, crafted by experienced monks and ajarns.<br>
+                    Exclusive Attunements and Empowerments: Benefit from monthly energy alignments performed by spiritual teachers, each valued at a minimum of $250, designed to elevate your spiritual consciousness.<br>
+                    Advanced Teachings: Access exclusive content and rituals available only to Ascendant Path members, deepening your spiritual practice.<br>
+                    Direct Contribution to Global Merit: Your support extends to temples and sanctuaries, fostering spiritual growth and merit worldwide.<br>
+                    <strong>Marketing Message:</strong><br>
+                    Elevate your spiritual journey with the Ascendant Path. For $88.88 a month, receive personalized guidance, exclusive attunements valued at over $250 each, and contribute directly to global spiritual initiatives.<br>
+                    Join Buddha.tv today to connect with authentic teachings, receive global blessings, and make a meaningful impact through your contributions.
+                  </p>
+                  
                 <h2 style="font-family:'Popppins', sans-serif">The Ascendant Path Subscription</h2>
               <p>Join our sacred community for just <strong>$88.88/month</strong>. Please fill out the form below and click the subscribe button to complete your subscription.</p>
             
@@ -270,7 +272,7 @@
                   </div>
   
                   <!-- Payment Button -->
-                  <button type="submit" class="btton">Subscribe</button>
+                  <button type="submit" class="bttonn">Subscribe</button>
               </form>
   
               <p class="message">Once you've submitted, you'll be contacted to confirm your subscription details.</p>
@@ -386,10 +388,10 @@
                  var subscc = document.getElementById('subscc');
   subscc.onsubmit = async function(e) {  
     e.preventDefault();  
-    var btn = document.querySelector('.btton');
-    btn.innerHTML = 'Subscribing...';
-    btn.style.opacity = '0.64734';
-    btn.disabled = true;  
+    var btnn = document.querySelector('.bttonn');
+    btnn.innerHTML = 'Subscribing...';
+    btnn.style.opacity = '0.64734';
+    btnn.disabled = true;  
     var sname = document.getElementById('snamee').value;
     var semail = document.getElementById('semaill').value; 
 
@@ -415,14 +417,14 @@
 
                   const result = await response.json();
                   window.location.href = result.paymenturl; 
-     btn.style.opacity = '2';
-     btn.disabled = false; 
+     btnn.style.opacity = '2';
+     btnn.disabled = false; 
 
             }  
               catch(err){ 
                 btn.innerHTML = 'Subscribe';
-     btn.style.opacity = '2';
-     btn.disabled = false; 
+     btnn.style.opacity = '2';
+     btnn.disabled = false; 
         var error = await err.text(); 
         alert(error);
             }
