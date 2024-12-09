@@ -25,10 +25,8 @@ const stripe = new Stripe(process.env.STRIPE_API_KEY);
 
 export const postSubscriber = async (req,res)=>{
          const subscriber = req.body; 
-         const username = subscriber.name;
-         const email = subscriber.email;   
-         const protocol = req.protocol;
-const host = req.get('host');
+         const username = encodeURIComponent(subscriber.name);
+         const email = encodeURIComponent(subscriber.email);  
 const WEB_DOMAIN = 'https://buddha.tv';
 console.log(WEB_DOMAIN);   
 
