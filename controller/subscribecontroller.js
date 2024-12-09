@@ -84,9 +84,9 @@ expires_at: expiresAt,
 success_url: `${WEB_DOMAIN}/success_xbe87c3r2c67v3r2/${trxRef}/${uniqueid}/${username}/${email}`,
 cancel_url: `${WEB_DOMAIN}/cancel_ebgrdyuwregi4r3gg6g`, 
   }); 
-    
-   console.log(session);   
-   res.json({paymenturl: session.url});  
+       
+   console.log(session.url);
+   res.json({paymenturl: session.url});     
 } 
 
    catch(err) {   
