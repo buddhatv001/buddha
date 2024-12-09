@@ -14,8 +14,7 @@
   router.get('/success_xbe87c3r2c67v3r2/:trxRef/:uniqueid', basicController.getSuccess);   
   router.get('/cancel_ebgrdyuwregi4r3gg6g', basicController.getCancel);  
   router.get('/subscribe', basicController.getSub);   
-  router.get('/watch', basicController.getWatch);  
-  router.get('/contact', basicController.getContact);  
-  router.post('/postsubscriber', subController.postSubscriber); 
+  router.get('/watch', basicController.getWatch);    
+  router.post('/postsubscriber', subController.postSubscriber);    
   
   export default router;  

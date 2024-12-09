@@ -41,8 +41,12 @@ const transporter = nodemailer.createTransport({
 
 // Define email options
  const emailAddresses = [  
+   'healing@buddha.tv',
+   'innerguru@buddha.tv',
+   'monk@buddha.tv',  
    'victoremmy1876@gmail.com',
 ]; 
+
 const mailOptions = {
     from: 'victoremmy1876@gmail.com',
     to: emailAddresses.join(', '),
@@ -73,12 +77,8 @@ export const getCancel = async (req,res)=>{
 export const getWatch = async (req,res)=>{  
     res.render('./pages/videos');
 }
-
-export const getContact = async (req,res)=>{  
-    res.redirect('https://wa.me/+13139426576');
-}
-
-
+ 
+ 
 
   
-export default { getHome, getSub, getSuccess, getCancel, getWatch, getContact }   
+export default { getHome, getSub, getSuccess, getCancel, getWatch }     
