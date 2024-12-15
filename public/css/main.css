@@ -2031,24 +2031,17 @@ input::-moz-focus-inner {
 /* -------------------------------------------------------------------
  * ## hero content
  * ------------------------------------------------------------------- */
-.hero-content {
-  height: 100%;
-  max-width: 1400px;
-  padding-top: 20vh;
-  padding-bottom: 18vh;
-  -webkit-align-items: flex-end;
-  -ms-flex-align: end;
-  align-items: flex-end;
-  position: relative;
-}
+ 
 
 .hero-content__text {
   position: relative;
+  text-align: center; /* Center the text */ 
+  margin-top:30%;
 }
 
 .hero-content h1 {
   font-weight: 700;
-  font-size: 7.6rem;
+  font-size: 40px; /* Larger font size for "Zen Up" */
   line-height: 1.263;
   letter-spacing: 0;
   color: #ffffff;
@@ -2056,6 +2049,15 @@ input::-moz-focus-inner {
   margin-right: 350px;
   padding-top: 3.2rem;
   position: relative;
+  word-wrap: break-word; /* Prevents long words from breaking the layout */
+}
+
+.hero-content h1 .subtitle {
+  display: block; /* Forces "Be the Guru you Seek" to always be on a new line */
+  font-size: 20px; /* Smaller font size for "Be the Guru you Seek" */
+  font-weight: 400;
+  color: #ffffff;
+  margin-top: 10px; /* Adds some spacing between the two lines */
 }
 
 .hero-content h1::before {
@@ -2068,6 +2070,7 @@ input::-moz-focus-inner {
   top: 0;
   left: .8rem;
 }
+
 
 /* -------------------------------------------------------------------
  * ## hero content buttons
