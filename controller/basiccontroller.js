@@ -12,6 +12,10 @@ export const getHome = (req,res)=>{
 
 export const getSub = (req,res)=>{
     res.render('./pages/subscribe');
+}      
+
+export const getAbt = (req,res)=>{
+  res.render('./pages/about');
 }    
 
 export const getSuccess = async (req,res)=>{   
@@ -92,4 +96,4 @@ export const getWatch = async (req,res)=>{
  
 
   
-export default { getHome, getSub, getSuccess, getCancel, getWatch }     
+export default { getHome, getSub, getSuccess, getCancel, getWatch,  getAbt, }     
