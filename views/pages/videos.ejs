@@ -19,18 +19,13 @@
     }
 
     .containerr {
-      display:flex;
-      justify-content:center;
-      flex-direction:column;
-      align-items: center;
-      justify-content: center;
-      border-radius: 15px; 
-      text-align:center; 
+      display:flex; 
+      flex-direction:column;   
+      text-align:center;
+      border-radius: 15px;  
       width:100%;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-      background-color: #1e1e1e; /* Darker background for content */
-      margin:0 auto;
-      max-width:1000px; 
+      background-color: #1e1e1e; /* Darker background for content */ 
       padding-left: 20px; 
       padding-right: 20px; 
       padding-top:30px; 
@@ -44,34 +39,99 @@
       margin-bottom: 15px;
       font-family: 'Playfair Display', serif;
       font-weight: bold;
-    }
+    }    
+  
 
-    .video-container { 
-      width:100%;  
-      justify-content:center;  
-      border:3px solid brown;
-    }
+     .avideo{
+       text-align:left; 
+       background-color:black;
+       min-width:100px; 
+       padding-bottom:20px;
+       margin-left:20px;
+       margin-right:20px; 
+       padding-left:20px;
+       padding-right:20px; 
+       border:5px solid coral;
+     }
 
-    .video-card {
-      background-color: #2a2a2a; /* Darker background for video cards */
-      border-radius: 15px;
-      overflow: hidden; 
-      height:50px;
-      width:100%;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-      margin-bottom: 20px;
-    }
- 
-    .video-card h3 {
-      color: #f5f5f5;
-      font-size: 18px; 
-      display:none;
-      padding: 10px;
-      margin: 0;
-      text-align: center;
-      background-color: #333;
-    } 
 
+       /* Video Info */
+.buddha-video-info { 
+    margin-bottom: 20px;
+}
+
+.buddha-video-title {
+    font-size:20px;  
+    color: white;
+    font-weight:bold; 
+    font-family:'Poppins', sans-serif;
+}     
+
+.buddha-video-description {
+    font-size:20px;
+    color:lightgrey;
+    font-weight:bold; 
+    font-family:'Poppins', sans-serif; 
+}  
+
+/* Video Placeholder */
+.buddha-video-placeholder {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Play Button */
+.buddha-play-icon {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Spinner */
+.buddha-loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border: 6px solid rgba(0, 0, 0, 0.1);
+    border-top: 8px solid coral;
+    border-radius: 50%;
+    animation: buddha-spin 1s linear infinite;
+}
+
+@keyframes buddha-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Iframe */
+.buddha-youtube-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+     
+  
   </style>
 </head>
 <body>
@@ -111,34 +171,35 @@
   <!-- Video Content Section -->
   <div class="containerr"> 
       <h2 style="font-family:'Poppins', sans-serif;">Exclusive Buddha Videos</h2>
-      <p>Watch these handpicked videos to gain wisdom and insight. Stay tuned for more!</p>
+      <p>Watch these handpicked videos to gain wisdom and insight. Stay tuned for more!</p> 
 
-      <!-- Video Cards -->
-      <div class="video-container"> 
-        <div class="video-card">
-          <iframe src="https://www.youtube.com/embed/GXxC4GLFzWo" title="The Path to Inner Peace"></iframe>
-          <h3>The Path to Inner Peace</h3>
-        </div> 
-        </div>
-  
-        <div class="video-container">
-        <div class="video-card">
-          <iframe src="https://www.youtube.com/embed/zJzzTuJJPTM" title="Meditation and Mindfulness"></iframe>
-          <h3>Meditation and Mindfulness</h3>
-        </div>   
-        </div> 
- 
-        <div class="video-container"> 
-          <div class="video-card">
-            <iframe src="https://www.youtube.com/embed/CnOVEoniehs" title="Meditation and Mindfulness"></iframe>
-            <h3>Meditation and Mindfulness</h3>
-          </div>   
-          </div> 
-
-
-        
+  <div class="avideo">    
+      <div class="buddha-video-info">
+        <h2 class="buddha-video-title"></h2>
+        <p class="buddha-video-description"></p>
       </div>
-    </div> 
+    
+    <div class="buddha-video-container buddha-video-placeholder" style="background-image: url('images/newbdbg.png'); background-position:center; background-repeat:no-repeat; background-size:contain">
+        <button class="buddha-play-icon">▶</button>  
+        <div class="buddha-loading-spinner" style="display: none;"></div>
+        <iframe 
+        class="buddha-youtube-player" 
+        src=""   
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen
+        style="display: none; width: 100%; height: 100%;">
+    </iframe> 
+    </div>
+    
+
+    
+    
+    </div>
+    
+         
+        
+      </div>     
  <!-- Social
     ================================================== -->
     <section class="s-social">
@@ -174,12 +235,56 @@
           
 
 
-  </section> <!-- end s-social -->
+  </section> <!-- end s-social -->        
 
   <!-- JavaScript -->
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/main.js"></script>   
+  <script src="https://www.youtube.com/iframe_api"></script>
+
+
+     <script>   
+     
+
+
+const playButton = document.querySelector('.buddha-play-icon');
+const videoContainer = document.querySelector('.buddha-video-container');
+const youtubePlayer = document.querySelector('.buddha-youtube-player'); 
+const videoTitle = document.querySelector('.buddha-video-title');
+const videoDescription = document.querySelector('.buddha-video-description'); 
+const loadingSpinner = document.querySelector('.buddha-loading-spinner'); 
+var playIcon = document.querySelector('.buddha-play-icon'); 
+
+// Video data
+const videoData = {
+    id: 'YOUR_VIDEO_ID',
+    title: 'Curated by BuddhaTV: Your Video Title Here',
+    description: 'This is a short description of the video to provide context and engagement.'
+};
+
+// Populate video info
+videoTitle.textContent = 'Curated by BuddhaTV: Mind Over Matter Part 3 of 3: Quantum Science of  Mind Over Matter, Sundays, Free Hangout Webcasts';
+videoDescription.textContent = 'Join Dr. Pillai on New Year"s Day for a LIVE Teaching and Empowerment';
+
+// Play video
+playButton.addEventListener('click', () => {    
+   loadingSpinner.style.display = 'block'; 
+   playIcon.style.display = 'none'; 
+    youtubePlayer.src = `https://www.youtube.com/embed/NpPNf03b500?autoplay=1`; 
+    // Wait until the iframe is loaded before showing it
+    youtubePlayer.onload = () => {      
+      setTimeout( ()=>{ 
+      loadingSpinner.style.display = 'none'; 
+        youtubePlayer.style.display = 'block'; } , 500);    
+    };
+});
+
+    
+    
+     </script>
+
+
 
 </body>
 </html>
