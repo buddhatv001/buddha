@@ -1,0 +1,8 @@
+services:
+  frontend:
+    build: .
+    container_name: vite-react-prod
+    restart: always
+    labels:
+      - "coolify.exposed=true"
+  
